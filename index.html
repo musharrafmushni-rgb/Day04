@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#10100f">
+    <title>PraRoz | Web Design Course</title>
+    <link href="./src/output.css" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body class="m-0 min-h-screen bg-neutral-950 font-sans text-white antialiased">
+    <div class="relative min-h-screen overflow-hidden bg-[url('https://images.unsplash.com/photo-1472214103451-9374bd1c798e?q=80&w=2070&auto=format&fit=crop')] bg-cover bg-center">
+        <div class="absolute inset-0 bg-black/65" aria-hidden="true"></div>
+
+        <header class="relative z-10 border-b border-white/15">
+                   <!-- நேவிகேஷன் பார் (Navbar) -->
+        <nav class="relative z-10 flex flex-wrap justify-between items-center px-6 py-4 border-b border-gray-600/50">
+            <!-- லோகோ -->
+            <div class="text-3xl font-bold mb-0">
+                <span class="text-orange-500">Pra</span>Roz<span class="text-orange-500 text-4xl">.</span>
+            </div>
+
+            <!-- மொபைல் மெனு பட்டன் (Ternary Operator லாஜிக்) -->
+            <!-- மொபைலில் மட்டும் இது தெரியும் (md:hidden) -->
+            <button id="menu-btn" class="md:hidden text-white text-2xl focus:outline-none z-50">
+                <i class="fa-solid fa-bars"></i>
+            </button>
+
+            <!-- டெஸ்க்டாப் மெனு (md:flex) -->
+            <div class="hidden md:flex gap-8 text-sm font-semibold tracking-wide">
+                <a href="#" class="hover:text-orange-500 transition duration-300">HOME</a>
+                <a href="#" class="hover:text-orange-500 transition duration-300">ABOUT</a>
+                <a href="#" class="hover:text-orange-500 transition duration-300">SERVICE</a>
+                <a href="#" class="hover:text-orange-500 transition duration-300">DESIGN</a>
+                <a href="#" class="hover:text-orange-500 transition duration-300">CONTACT</a>
+            </div>
+
+            <!-- தேடல் பட்டி -->
+            <div class="hidden md:flex mt-4 md:mt-0">
+                <input type="text" placeholder="Type to Search" class="px-3 py-1.5 bg-transparent border border-orange-500 text-white rounded-l-md focus:outline-none placeholder-gray-300 w-48">
+                <button class="bg-orange-500 px-4 py-1.5 text-white font-semibold rounded-r-md hover:bg-orange-600 transition">Search</button>
+            </div>
+
+            <!-- மொபைல் மெனு லிஸ்ட் (ஆரம்பத்தில் மறைந்திருக்கும்) -->
+            <div id="mobile-menu" class="hidden w-full flex-col gap-4 mt-4 text-sm font-semibold tracking-wide md:hidden">
+                <a href="#" class="hover:text-orange-500 transition duration-300">HOME</a>
+                <a href="#" class="hover:text-orange-500 transition duration-300">ABOUT</a>
+                <a href="#" class="hover:text-orange-500 transition duration-300">SERVICE</a>
+                <a href="#" class="hover:text-orange-500 transition duration-300">DESIGN</a>
+                <a href="#" class="hover:text-orange-500 transition duration-300">CONTACT</a>
+                <!-- மொபைலுக்கான தேடல் பட்டி -->
+                <div class="flex mt-2">
+                    <input type="text" placeholder="Type to Search" class="px-3 py-1.5 bg-transparent border border-orange-500 text-white rounded-l-md focus:outline-none placeholder-gray-300 w-full">
+                    <button class="bg-orange-500 px-4 py-1.5 text-white font-semibold rounded-r-md hover:bg-orange-600 transition">Search</button>
+                </div>
+            </div>
+        </nav>
+        
+        
+        </header>
+
+        <main id="home" class="relative z-10 mx-auto grid max-w-7xl grid-cols-1 items-center gap-12 px-6 py-16 lg:min-h-[calc(100vh-89px)] lg:grid-cols-2 lg:py-20">
+            <section id="course" aria-labelledby="course-title">
+                <p class="mb-4 text-sm font-semibold uppercase tracking-[0.2em] text-orange-300">Learn by creating</p>
+                <h1 id="course-title" class="font-serif text-5xl font-bold leading-tight md:text-6xl" style="font-family: 'Playfair Display', serif;">
+                    Web Design &amp;<br>
+                    <span class="text-orange-400">Development</span><br>
+                    Course
+                </h1>
+                <p id="about" class="mt-6 max-w-lg text-base leading-relaxed text-white/80">
+                    Build a strong foundation in web design and development. Learn how HTML, CSS, and thoughtful visual design come together to create useful experiences for the web.
+                </p>
+                <a class="mt-8 inline-flex rounded bg-orange-500 px-8 py-3 font-semibold text-white shadow-lg transition hover:bg-orange-600 focus:outline-none focus:ring-2 focus:ring-orange-300 focus:ring-offset-2 focus:ring-offset-neutral-950" href="#login">JOIN US</a>
+            </section>
+
+            <section id="login" class="flex justify-center lg:justify-end" aria-labelledby="login-title">
+                <div class="w-full max-w-sm rounded-lg border border-white/15 bg-black/80 p-8 shadow-2xl backdrop-blur-sm">
+                    <h2 id="login-title" class="rounded bg-white/10 py-3 text-center text-xl font-bold">Login Here</h2>
+
+                    <form class="mt-6 flex flex-col gap-5" action="#login" method="get">
+                        <div>
+                            <label class="sr-only" for="email">Email address</label>
+                            <input id="email" class="w-full border-b border-white/50 bg-transparent px-2 py-3 text-white placeholder:text-white/55 focus:border-orange-400 focus:outline-none" type="email" name="email" placeholder="Enter Email Here" autocomplete="email" required>
+                        </div>
+                        <div>
+                            <label class="sr-only" for="password">Password</label>
+                            <input id="password" class="w-full border-b border-white/50 bg-transparent px-2 py-3 text-white placeholder:text-white/55 focus:border-orange-400 focus:outline-none" type="password" name="password" placeholder="Enter Password Here" autocomplete="current-password" required>
+                        </div>
+                        <button class="mt-2 rounded bg-orange-500 py-3 font-semibold transition hover:bg-orange-600 focus:outline-none focus:ring-2 focus:ring-orange-300" type="submit">Login</button>
+                    </form>
+
+                    <p class="mt-5 text-center text-sm text-white/75">
+                        Don't have an account?<br>
+                        <a class="font-semibold text-orange-400 hover:underline" href="#contact">Sign up here</a>
+                    </p>
+
+                    <p class="mt-6 text-center text-sm text-white/75">Log in with</p>
+                    <div class="mt-3 flex justify-center gap-5 text-xl" aria-label="Social sign-in options">
+                        <a class="transition hover:text-orange-400" href="#login" aria-label="Facebook"><i class="fa-brands fa-facebook" aria-hidden="true"></i></a>
+                        <a class="transition hover:text-orange-400" href="#login" aria-label="Instagram"><i class="fa-brands fa-instagram" aria-hidden="true"></i></a>
+                        <a class="transition hover:text-orange-400" href="#login" aria-label="Twitter"><i class="fa-brands fa-twitter" aria-hidden="true"></i></a>
+                        <a class="transition hover:text-orange-400" href="#login" aria-label="Google"><i class="fa-brands fa-google" aria-hidden="true"></i></a>
+                        <a class="transition hover:text-orange-400" href="#login" aria-label="Skype"><i class="fa-brands fa-skype" aria-hidden="true"></i></a>
+                    </div>
+                </div>
+            </section>
+        </main>
+    </div>
+    <!-- JavaScript லாஜிக் (Ternary Operator) -->
+        <script>
+            const menuBtn = document.getElementById('menu-btn');
+            const mobileMenu = document.getElementById('mobile-menu');
+
+            menuBtn.addEventListener('click', () => {
+                mobileMenu.classList.toggle('hidden');
+                // Ternary operator பயன்படுத்தி ஐகானை மாற்றுதல்
+                menuBtn.innerHTML = mobileMenu.classList.contains('hidden') 
+                    ? '<i class="fa-solid fa-bars"></i>' 
+                    : '<i class="fa-solid fa-xmark"></i>';
+            });
+        </script>
+</body>
+</html>
